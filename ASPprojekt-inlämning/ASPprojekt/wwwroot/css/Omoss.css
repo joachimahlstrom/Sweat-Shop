@@ -1,0 +1,62 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.om {
+    width: 100%;
+    padding: 78px 0px;
+    background-color: white;
+}
+
+    .om img {
+        height: auto;
+        width: 420px;
+    }
+
+.om-text {
+    width: 550px;
+}
+
+.logo {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.om h1 {
+    color: green;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.om h5 {
+    color: green;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+footer {
+    background-color: green;
+    color: white;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.om p {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    line-height: 31.5px;
+    margin: 30px 0;
+}

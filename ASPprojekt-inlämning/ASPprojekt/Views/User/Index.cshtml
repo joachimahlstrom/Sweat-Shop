@@ -1,0 +1,32 @@
+﻿ @model UserModel
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logga in</title>
+
+
+    <link rel="stylesheet" href="/css/loginform.css" />
+
+</head>
+<body>
+
+    <div class="form-container">
+        <!--Här loggar användaren in och ut för att komma åt den säkra sidan Create.-->
+
+        <form action="" method="post">
+            <h3>Logga in</h3>
+            
+            <input type="email" name="email" placeholder="ange din email" required />
+            <input type="password" name="password" placeholder="ange ditt lösenord" required />
+            <input type="submit" name="submit" value="Logga in" class="form-btn">
+            <p>Har du inget konto? <a asp-action="Blimedlem" asp-controller="Home">Registrera dig här</a></p>
+            <a asp-action="SignOutUser">Logga ut</a>
+
+        </form>
+        @ViewBag.ErrorMessage
+    </div>
+</body>
+</html>

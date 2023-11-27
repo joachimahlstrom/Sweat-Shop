@@ -1,0 +1,51 @@
+﻿@model List<TraningModel>
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <link rel="stylesheet" href="/css/Index.css" />
+    <link rel="stylesheet" href="/css/trana.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="~/images/golds-gym-5-logo.png" alt="Logotype" width="100px">
+        </div>
+        <nav>
+            <!--Här ser användare de övningar som finns och kan även om hen är inloggad lägga till egna övningar.-->
+
+            <ul>
+                <li><a asp-action="Index" asp-controller="Home">Start</a></li>
+                <li><a asp-action="Index" asp-controller="User">Logga in</a></li>
+                <li><a asp-action="Index" asp-controller="Traning">Träna</a></li>
+                <li><a asp-action="Omoss" asp-controller="Home">Om oss</a></li>
+                <li><a asp-action="Blimedlem" asp-controller="Home" class="signup-btn">Bli medlem</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <h1>Dags att börja</h1>
+    <h2>Välj övningar</h2>
+    <a asp-action="Create" asp-controller="Traning"> Lägg till egna övningar</a>
+    <p>Nedan finns det olika övningar, Varva mellan dessa övningar och kom iform hemifrån!</p>
+    <div class="tabellOvningar">
+        <table class="Ovningar">
+            <tr>
+                <th>Namn</th>
+                <th>Beskrivning</th>
+            </tr>
+            @foreach (var tOvningar in Model)
+            {
+                <!--Här hämtas övningar från databasen och visas upp i en lista.-->
+                <tr>
+                    <td> @Html.DisplayFor(a => tOvningar.Namn) </td>
+                    <td> @Html.DisplayFor(a => tOvningar.Beskrivning) </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+    <footer>
+        <p> &copy; The Sweat Shop</p>
+    </footer>
+
+</body>

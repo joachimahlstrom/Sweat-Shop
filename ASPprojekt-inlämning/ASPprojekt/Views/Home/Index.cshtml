@@ -1,0 +1,70 @@
+﻿<!--Startsidan som visar ett menysystem samt content i mitten som användaren kan klicka på.-->
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sweat shop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/Index.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js%22%3E"></script>
+    <script>
+        function nextPage() {
+            window.location.href = '@Url.Content("~/Home/Omoss")';
+        }
+        $(document).ready(function () {
+            $(".cta").hover(
+                function () {
+                    $(this).css("background", "gray");
+                },
+                function () {
+                    $(this).css("background", "green");
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="~/images/golds-gym-5-logo.png" alt="Logotype" width="100px">
+        </div>
+        <nav>
+
+            <ul>
+                <li><a asp-action ="Index" asp-controller="Home">Start</a></li>
+                <li><a asp-action ="Index" asp-controller="User">Logga in</a></li>
+                <li><a asp-action="Index" asp-controller="Traning">Träna</a></li>
+                <li><a asp-action ="Omoss" asp-controller="Home">Om oss</a></li>
+                <li><a asp-action ="Blimedlem" asp-controller="Home" class="signup-btn">Bli medlem</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <div class="content-left">
+            <h1>Börja träna nu </h1>
+
+            <p>Har du inte tagit tag i träningen än? Är det för mycket att göra på jobbet eller i skolan? Med våra enkla program kan du träna när du har tid och vart du vill!</p>
+            <button class="cta" onclick="nextPage()">Läs mer</a>
+        </div>
+        <div class="content-right">
+            <image src="https://img.freepik.com/free-photo/full-shot-man-training-with-laptop_23-2149177984.jpg?size=626&ext=jpg&ga=GA1.2.741842584.1663005280" class="training-img">
+        </div>
+    </main>
+
+
+    <footer>
+        <p> &copy; The Sweat Shop</p>
+    </footer>
+   
+
+
+
+
+</body>
+</html>

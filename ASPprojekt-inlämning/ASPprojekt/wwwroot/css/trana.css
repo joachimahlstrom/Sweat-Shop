@@ -1,0 +1,101 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+header {
+    height: 200px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    color: green;
+}
+
+h2 {
+    color: green;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+    ul li a {
+        display: inline-block;
+        color: green;
+        text-decoration: none;
+        padding: 0 20px;
+    }
+
+li a::after {
+    transition: all 0.5s;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background: greenyellow;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+.training-img {
+    max-width: 670px;
+    height: auto;
+}
+
+.signup-btn {
+    padding: 15px 20px;
+    background-color: green;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+ul.upperbody {
+    list-style: square;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul.underbody {
+    list-style: square;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h3 {
+    color: green;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+footer {
+    background-color: green;
+    color: white;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.Ovningar {
+    display: flex;
+    align-items:center;
+}

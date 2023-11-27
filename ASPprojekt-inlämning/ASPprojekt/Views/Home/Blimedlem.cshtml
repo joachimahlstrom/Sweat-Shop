@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registera dig</title>
+
+    <link rel="stylesheet" href="/css/loginform.css" />
+
+</head>
+<body>
+
+    <div class="form-container">
+
+        <form action="" method="post">
+            <h3>Registrera dig</h3>
+            <!--Här registrera sig användaren, ingen som funkar nu då inlogg är hårdkodat.-->
+            
+            <input type="text" name="name" placeholder="ange ditt namn" required />
+            <input type="email" name="email" placeholder="ange din email" required />
+            <input type="password" name="password" placeholder="ange ditt lösenord" required />
+            <input type="password" name="cpassword" placeholder="upprepa ditt lösenord" required />
+
+            <select name="user_type">
+                <option value="user">användare</option>
+                <option value="admin">admin</option>
+            </select>
+            <input type="submit" name="submit" value="Registrera dig" class="form-btn">
+            <p>har du redan ett konto? <a asp-action="Loggain" asp-controller="Home">Logga in här</a></p>
+        </form>
+
+    </div>
+
+</body>
+</html>
